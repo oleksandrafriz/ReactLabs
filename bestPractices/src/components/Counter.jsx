@@ -1,30 +1,18 @@
-import React, { useState } from 'react'
+import React from "react";
+import {useCounter} from './CounterContext'
+import styles from './Counter.module.css'
 
-export default function Counter() {
-    const[count, setCount] = useState(0);
-    
-    const increment = () => {
-      setCount(prevCount => prevCount + 1);
-    };
+export default function Counter() { 
+  const { count, increment, decrement, reset } = useCounter();
   
-    const decrement = () => {
-      setCount(prevCount => prevCount - 1);
-    };
-  
-    const reset = () => {
-      setCount(0);
-    };
-
-
-  return (
-    <div className="counter">
-      <h2>Simple Counter</h2>
-      <p>Current Count: {count}</p>
-      <div className="counter-buttons">
-        <button onClick={decrement}>-</button>
-        <button onClick={reset}>Reset</button>
-        <button onClick={increment}>+</button>
-      </div>
-    </div>
-  )
-}
+  return ( 
+  <div className={styles.counter}> 
+    <h2>Simple Counter</h2> 
+    <p>Current Count: {count}</p> 
+    <div className={styles['counter-buttons']}> 
+      <button onClick={decrement}>-</button> 
+      <button onClick={reset}>Reset</button> 
+      <button onClick={increment}>+</button> 
+      </div> 
+  </div> 
+) }
