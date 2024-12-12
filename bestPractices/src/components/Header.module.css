@@ -1,0 +1,18 @@
+.header {
+    background: linear-gradient(135deg, #6b73ff, #a0a3cd);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
