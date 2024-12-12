@@ -20,9 +20,11 @@ export default function Counter() {
     <div className="counter">
       <h2>Simple Counter</h2>
       <p>Current Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
+      <div className="counter-buttons">
+        <button onClick={decrement}>-</button>
+        <button onClick={reset}>Reset</button>
+        <button onClick={increment}>+</button>
+      </div>
     </div>
   )
 }
